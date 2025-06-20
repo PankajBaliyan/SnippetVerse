@@ -253,21 +253,6 @@ export default Counter;`,
   }
 ];
 
-export const getLanguages = (): string[] => {
-  return [...new Set(snippets.map(snippet => snippet.language))];
-};
-
-export const getCategories = (language?: string): string[] => {
-  const filteredSnippets = language ? snippets.filter(s => s.language === language) : snippets;
-  return [...new Set(filteredSnippets.map(snippet => snippet.category))];
-};
-
-export const getSnippetsByLanguageAndCategory = (language: string, category: string): Snippet[] => {
-  return snippets.filter(snippet => 
-    snippet.language === language && snippet.category === category
-  );
-};
-
 export const searchSnippets = (snippets: Snippet[], query: string): Snippet[] => {
   if (!query.trim()) return snippets;
   

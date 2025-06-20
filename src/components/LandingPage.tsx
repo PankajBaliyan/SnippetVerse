@@ -10,10 +10,22 @@ import {
   Users,
   Zap,
 } from "lucide-react";
-import { Snippet, snippets } from "../data/snippets";
 import { CopyButton } from "./CopyButton";
 import { AppHeader } from "./AppHeader";
 import Footer from "@/components/Footer.tsx";
+
+interface Snippet {
+  id: string;
+  title: string;
+  language: string;
+  category: string;
+  code: string;
+  tags: string[];
+  description: string;
+  shortDescription: string;
+  usage?: string;
+  contributedBy?: string;
+}
 
 interface LandingPageProps {
   onGetStarted: () => void;
@@ -22,6 +34,7 @@ interface LandingPageProps {
   totalSnippets: number;
   totalLanguages: number;
   totalCategories: number;
+  allLoadedSnippets: Snippet[];
 }
 
 export const LandingPage = ({
@@ -31,10 +44,11 @@ export const LandingPage = ({
   totalSnippets,
   totalLanguages,
   totalCategories,
+  allLoadedSnippets,
 }: LandingPageProps) => {
   // Get random snippets for preview
   const randomSnippets = useMemo(() => {
-    const shuffled = [...snippets].sort(() => 0.5 - Math.random());
+    const shuffled = [...allLoadedSnippets].sort(() => 0.5 - Math.random());
     return shuffled.slice(0, 6);
   }, []);
 
@@ -420,7 +434,7 @@ export const LandingPage = ({
             </div>
           </div>
 
-         <Footer mode={'outside'}/>
+          <Footer mode={"outside"} />
         </div>
       </footer>
     </div>

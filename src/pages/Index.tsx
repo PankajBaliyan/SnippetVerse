@@ -419,6 +419,7 @@ const IndexContent = () => {
         totalSnippets={allLoadedSnippets.length}
         totalLanguages={allLanguages.length}
         totalCategories={allCategories.length}
+        allLoadedSnippets={allLoadedSnippets}
       />
     );
   }
