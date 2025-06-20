@@ -1,17 +1,7 @@
-import { useMemo } from "react";
-import {
-  ArrowRight,
-  Book,
-  Code,
-  Globe,
-  Plus,
-  Search,
-  Star,
-  Users,
-  Zap,
-} from "lucide-react";
-import { CopyButton } from "./CopyButton";
-import { AppHeader } from "./AppHeader";
+import {useMemo} from "react";
+import {ArrowRight, Book, Code, Globe, Plus, Search, Star, Users, Zap,} from "lucide-react";
+import {CopyButton} from "./CopyButton";
+import {AppHeader} from "./AppHeader";
 import Footer from "@/components/Footer.tsx";
 
 interface Snippet {
@@ -58,7 +48,7 @@ export const LandingPage = ({
   };
 
   const handleContribute = () => {
-    window.open("https://github.com", "_blank", "noopener,noreferrer");
+    window.open("https://github.com/PankajBaliyan/SnippetVerse", "_blank", "noopener,noreferrer");
   };
 
   const features = [

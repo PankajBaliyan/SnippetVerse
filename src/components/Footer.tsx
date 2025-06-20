@@ -25,7 +25,7 @@ function Footer(props:FooterProps) {
                 </a>{" "}
                 and{" "}
                 <a
-                    href="https://github.com/PankajBaliyan/snippetverse/contributors"
+                    href="https://github.com/PankajBaliyan/SnippetVerse/graphs/contributors"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors"

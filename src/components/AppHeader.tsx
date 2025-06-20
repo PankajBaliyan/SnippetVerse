@@ -1,6 +1,5 @@
-
-import { Github, Heart } from "lucide-react";
-import { ThemeToggle } from "./ThemeToggle";
+import {Github, Heart} from "lucide-react";
+import {ThemeToggle} from "./ThemeToggle";
 
 interface AppHeaderProps {
   onHomeClick: () => void;
@@ -34,7 +33,7 @@ export const AppHeader = ({ onHomeClick, onFavoritesClick }: AppHeaderProps) => 
               </button>
             )}
             <a
-              href="https://github.com"
+              href="https://github.com/PankajBaliyan/SnippetVerse"
               target="_blank"
               rel="noopener noreferrer"
               className="p-1.5 sm:p-2 rounded-lg text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
