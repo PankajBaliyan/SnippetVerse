@@ -2,7 +2,7 @@
 
 **SnippetVerse** is an open-source web application for developers to browse, search, and save their favorite code snippets across multiple programming languages and frameworks. Built with React, Vite, and Tailwind CSS, it provides a beautiful, fast, and modern experience—no backend required!
 
-![SnippetVerse Banner](https://lovable.dev/opengraph-image-p98pqg.png)
+![SnippetVerse Banner](/public/images/SnippetVerse_landing.webp)
 
 ## ✨ Features
 
@@ -26,8 +26,8 @@
 Clone the repository:
 
 ```sh
-git clone https://github.com/pankajkumar/snippetverse.git
-cd snippetverse
+git https://github.com/PankajBaliyan/SnippetVerse
+cd SnippetVerse
 ```
 
 Install dependencies:
