@@ -1,0 +1,12 @@
+# .github/workflows/format.yml
+name: Format Check
+
+on: [pull_request]
+
+jobs:
+  format:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: npm ci
+      - run: npm run format:check

@@ -8,7 +8,11 @@
     "build": " vite build",
     "build:dev": " vite build --mode development",
     "lint": "eslint .",
-    "preview": " vite preview"
+    "preview": " vite preview",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "format-and-lint": "prettier --check . && eslint .",
+    "validate-snippets": "node scripts/validateSnippets.cjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.1.1",
