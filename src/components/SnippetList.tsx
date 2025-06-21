@@ -1,5 +1,5 @@
-import { Heart } from "lucide-react";
-import { Snippet } from "../data/snippets";
+import {Heart} from "lucide-react";
+import {Snippet} from "../data/snippets";
 
 interface SnippetListProps {
   snippets: Snippet[];
@@ -46,7 +46,9 @@ export const SnippetList = ({
                 <span className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 capitalize truncate">
                   {snippet?.language}
                 </span>
-                <span className="text-xs sm:text-sm text-gray-500 dark:text-gray-500">•</span>
+                <span className="text-xs sm:text-sm text-gray-500 dark:text-gray-500">
+                  •
+                </span>
                 <span className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 capitalize truncate">
                   {snippet?.category}
                 </span>
@@ -66,7 +68,9 @@ export const SnippetList = ({
               <Heart
                 size={14}
                 className="sm:w-4 sm:h-4"
-                fill={favorites?.includes(snippet?.id) ? "currentColor" : "none"}
+                fill={
+                  favorites?.includes(snippet?.id) ? "currentColor" : "none"
+                }
               />
             </button>
           </div>

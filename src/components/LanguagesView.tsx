@@ -1,14 +1,17 @@
-import { Code2, Globe, Database, Palette, Smartphone } from "lucide-react";
-import { FaHtml5, FaJava, FaPython, FaRust } from "react-icons/fa";
-import { IoLogoCss3, IoLogoJavascript, IoLogoNodejs, IoLogoReact } from "react-icons/io5";
-import { SiMysql, SiSwift, SiTypescript } from "react-icons/si";
+import {Code2, Globe} from "lucide-react";
+import {FaHtml5, FaJava, FaPython, FaRust} from "react-icons/fa";
+import {IoLogoCss3, IoLogoJavascript, IoLogoNodejs, IoLogoReact,} from "react-icons/io5";
+import {SiMysql, SiSwift, SiTypescript} from "react-icons/si";
 
 interface LanguagesViewProps {
   languages: string[];
   onLanguageSelect: (language: string) => void;
 }
 
-export const LanguagesView = ({ languages, onLanguageSelect }: LanguagesViewProps) => {
+export const LanguagesView = ({
+  languages,
+  onLanguageSelect,
+}: LanguagesViewProps) => {
   const getLanguageIcon = (language: string) => {
     const iconMap: { [key: string]: any } = {
       javascript: IoLogoJavascript,
@@ -48,7 +51,10 @@ export const LanguagesView = ({ languages, onLanguageSelect }: LanguagesViewProp
   };
 
   return (
-    <div className="bg-white" style={{ backgroundColor: "hsl(var(--background))" }}>
+    <div
+      className="bg-white"
+      style={{ backgroundColor: "hsl(var(--background))" }}
+    >
       <div className="text-center mb-8 sm:mb-12">
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
           Choose a Language
@@ -74,7 +80,9 @@ export const LanguagesView = ({ languages, onLanguageSelect }: LanguagesViewProp
               {language === "all" ? "All Languages" : language}
             </h3>
             <p className="text-sm text-gray-600 dark:text-gray-400">
-              {language === "all" ? "Browse all available snippets" : `${language} code examples`}
+              {language === "all"
+                ? "Browse all available snippets"
+                : `${language} code examples`}
             </p>
           </button>
         ))}

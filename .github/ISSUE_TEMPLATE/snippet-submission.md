@@ -3,8 +3,7 @@ name: 🚀 Snippet Submission
 about: Add a new code snippet to SnippetVerse
 title: "[Snippet] Add <snippet-title>"
 labels: enhancement, snippet
-assignees: ''
-
+assignees: ""
 ---
 
 ## 📌 Snippet Title
@@ -34,7 +33,9 @@ Briefly describe what the snippet does and why it's useful.
 ```ts
 // Paste your snippet code here
 ```
+
 ## 👤 GitHub Username
+
 ```ts
-yourusername // PankajBaliyan (it's mine)
+yourusername; // PankajBaliyan (it's mine)
 ```

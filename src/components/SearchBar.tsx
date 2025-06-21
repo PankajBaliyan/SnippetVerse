@@ -1,5 +1,4 @@
-
-import { Search } from 'lucide-react';
+import {Search} from "lucide-react";
 
 interface SearchBarProps {
   value: string;
@@ -7,7 +6,11 @@ interface SearchBarProps {
   placeholder?: string;
 }
 
-export const SearchBar = ({ value, onChange, placeholder = "Search snippets..." }: SearchBarProps) => {
+export const SearchBar = ({
+  value,
+  onChange,
+  placeholder = "Search snippets...",
+}: SearchBarProps) => {
   return (
     <div className="relative">
       <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">

@@ -1,36 +1,38 @@
-
 interface CategoryGridProps {
   categories: string[];
   onCategorySelect: (category: string) => void;
 }
 
-export const CategoryGrid = ({ categories, onCategorySelect }: CategoryGridProps) => {
+export const CategoryGrid = ({
+  categories,
+  onCategorySelect,
+}: CategoryGridProps) => {
   const getCategoryIcon = (category: string) => {
     const icons: { [key: string]: string } = {
-      array: '📊',
-      string: '📝',
-      object: '🏗️',
-      async: '⚡',
-      hooks: '🎣',
-      layout: '📐',
-      function: '⚙️',
-      component: '🧩'
+      array: "📊",
+      string: "📝",
+      object: "🏗️",
+      async: "⚡",
+      hooks: "🎣",
+      layout: "📐",
+      function: "⚙️",
+      component: "🧩",
     };
-    return icons[category] || '📄';
+    return icons[category] || "📄";
   };
 
   const getCategoryDescription = (category: string) => {
     const descriptions: { [key: string]: string } = {
-      array: 'Array manipulation and iteration methods',
-      string: 'String operations and formatting',
-      object: 'Object manipulation and destructuring',
-      async: 'Asynchronous programming patterns',
-      hooks: 'React hooks and state management',
-      layout: 'CSS layout techniques and styling',
-      function: 'Function utilities and patterns',
-      component: 'Reusable components and patterns'
+      array: "Array manipulation and iteration methods",
+      string: "String operations and formatting",
+      object: "Object manipulation and destructuring",
+      async: "Asynchronous programming patterns",
+      hooks: "React hooks and state management",
+      layout: "CSS layout techniques and styling",
+      function: "Function utilities and patterns",
+      component: "Reusable components and patterns",
     };
-    return descriptions[category] || 'Code snippets and examples';
+    return descriptions[category] || "Code snippets and examples";
   };
 
   return (

@@ -24,7 +24,13 @@ import {LanguagesView} from "@/components/LanguagesView";
 import {loadSnippets} from "@/utils/loadSnippetsDynamic";
 import Footer from "@/components/Footer.tsx";
 
-type ViewState = "landing" | "languages" | "categories" | "snippets" | "detail" | "favorites";
+type ViewState =
+  | "landing"
+  | "languages"
+  | "categories"
+  | "snippets"
+  | "detail"
+  | "favorites";
 
 type SnippetData = {
   availableLanguages: string[];
@@ -55,10 +61,10 @@ const IndexContent = () => {
   });
 
   const [selectedLanguage, setSelectedLanguage] = useState(
-    () => searchParams.get("language") || "all"
+    () => searchParams.get("language") || "all",
   );
   const [selectedCategory, setSelectedCategory] = useState(
-    () => searchParams.get("category") || ""
+    () => searchParams.get("category") || "",
   );
   const [selectedSnippet, setSelectedSnippet] = useState<Snippet | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
@@ -101,7 +107,8 @@ const IndexContent = () => {
         setDynamicCategories(allData?.allCategories);
       } else {
         // Filter categories based on selected language
-        const categoriesForLanguage = allData?.languageCategories[selectedLanguage] || [];
+        const categoriesForLanguage =
+          allData?.languageCategories[selectedLanguage] || [];
         setDynamicCategories(categoriesForLanguage);
       }
 
@@ -118,13 +125,13 @@ const IndexContent = () => {
 
       if (selectedLanguage && selectedLanguage !== "all") {
         filteredSnippets = filteredSnippets.filter(
-          (snippet) => snippet.language === selectedLanguage
+          (snippet) => snippet.language === selectedLanguage,
         );
       }
 
       if (selectedCategory) {
         filteredSnippets = filteredSnippets.filter(
-          (snippet) => snippet.category === selectedCategory
+          (snippet) => snippet.category === selectedCategory,
         );
       }
 
@@ -182,12 +189,20 @@ const IndexContent = () => {
   // Load snippets when language or category changes, on page loads
   useEffect(() => {
     const loadSnippets = async () => {
-      if (viewState === "snippets" || viewState === "categories" || viewState === "detail") {
+      if (
+        viewState === "snippets" ||
+        viewState === "categories" ||
+        viewState === "detail"
+      ) {
         try {
           // If we're in detail view and have a snippet ID from URL, find and set the snippet
           const snippetId = searchParams.get("snippet");
 
-          if (viewState === "detail" && snippetId && dynamicSnippets?.length > 0) {
+          if (
+            viewState === "detail" &&
+            snippetId &&
+            dynamicSnippets?.length > 0
+          ) {
             const snippet = dynamicSnippets?.find((s) => s?.id === snippetId);
 
             if (snippet) {
@@ -223,13 +238,17 @@ const IndexContent = () => {
     let baseSnippets: Snippet[] = [...dynamicSnippets];
 
     if (selectedLanguage !== "all") {
-      baseSnippets = baseSnippets.filter((snippet) => snippet.language === selectedLanguage);
+      baseSnippets = baseSnippets.filter(
+        (snippet) => snippet.language === selectedLanguage,
+      );
     }
 
     // Only filter by category if a specific category is selected
     // If selectedCategory is empty (""), show all categories (All Categories)
     if (selectedCategory) {
-      baseSnippets = baseSnippets.filter((snippet) => snippet.category === selectedCategory);
+      baseSnippets = baseSnippets.filter(
+        (snippet) => snippet.category === selectedCategory,
+      );
     }
 
     return searchSnippets(baseSnippets, searchQuery);
@@ -307,7 +326,12 @@ const IndexContent = () => {
     } else if (viewState === "categories") {
       setViewState("languages");
       setSelectedLanguage("all");
-      updateURL({ view: "languages", language: "all", category: "", snippet: null });
+      updateURL({
+        view: "languages",
+        language: "all",
+        category: "",
+        snippet: null,
+      });
     } else if (viewState === "languages" || viewState === "favorites") {
       setViewState("landing");
       updateURL({ view: "landing" });
@@ -336,7 +360,9 @@ const IndexContent = () => {
             <>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
-                <BreadcrumbPage className="text-xs sm:text-sm">Favorites</BreadcrumbPage>
+                <BreadcrumbPage className="text-xs sm:text-sm">
+                  Favorites
+                </BreadcrumbPage>
               </BreadcrumbItem>
             </>
           )}
@@ -349,7 +375,12 @@ const IndexContent = () => {
                   onClick={() => {
                     setViewState("languages");
                     setSelectedLanguage("all");
-                    updateURL({ view: "languages", language: "all", category: "", snippet: null });
+                    updateURL({
+                      view: "languages",
+                      language: "all",
+                      category: "",
+                      snippet: null,
+                    });
                   }}
                   className="cursor-pointer text-xs sm:text-sm"
                 >
@@ -359,7 +390,9 @@ const IndexContent = () => {
             </>
           )}
 
-          {(viewState === "categories" || viewState === "snippets" || viewState === "detail") && (
+          {(viewState === "categories" ||
+            viewState === "snippets" ||
+            viewState === "detail") && (
             <>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
@@ -367,32 +400,39 @@ const IndexContent = () => {
                   onClick={() => {
                     setViewState("categories");
                     setSelectedCategory("");
-                    updateURL({ view: "categories", category: "", snippet: null });
+                    updateURL({
+                      view: "categories",
+                      category: "",
+                      snippet: null,
+                    });
                   }}
                   className="cursor-pointer capitalize text-xs sm:text-sm"
                 >
-                  {selectedLanguage === "all" ? "All Languages" : selectedLanguage}
+                  {selectedLanguage === "all"
+                    ? "All Languages"
+                    : selectedLanguage}
                 </BreadcrumbLink>
               </BreadcrumbItem>
             </>
           )}
 
-          {(viewState === "snippets" || viewState === "detail") && selectedCategory && (
-            <>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                <BreadcrumbLink
-                  onClick={() => {
-                    setViewState("snippets");
-                    updateURL({ view: "snippets", snippet: null });
-                  }}
-                  className="cursor-pointer capitalize text-xs sm:text-sm"
-                >
-                  {selectedCategory}
-                </BreadcrumbLink>
-              </BreadcrumbItem>
-            </>
-          )}
+          {(viewState === "snippets" || viewState === "detail") &&
+            selectedCategory && (
+              <>
+                <BreadcrumbSeparator />
+                <BreadcrumbItem>
+                  <BreadcrumbLink
+                    onClick={() => {
+                      setViewState("snippets");
+                      updateURL({ view: "snippets", snippet: null });
+                    }}
+                    className="cursor-pointer capitalize text-xs sm:text-sm"
+                  >
+                    {selectedCategory}
+                  </BreadcrumbLink>
+                </BreadcrumbItem>
+              </>
+            )}
 
           {viewState === "detail" && selectedSnippet && (
             <>
@@ -425,7 +465,9 @@ const IndexContent = () => {
   }
 
   const shouldShowSidebar =
-    viewState === "snippets" || viewState === "categories" || viewState === "detail";
+    viewState === "snippets" ||
+    viewState === "categories" ||
+    viewState === "detail";
 
   if (shouldShowSidebar) {
     return (
@@ -481,7 +523,7 @@ const IndexContent = () => {
               )}
             </main>
 
-            <Footer mode={'inside'}/>
+            <Footer mode={"inside"} />
           </div>
         </div>
       </SidebarProvider>
@@ -526,8 +568,7 @@ const IndexContent = () => {
         )}
       </main>
 
-      <Footer mode={'inside'}/>
-
+      <Footer mode={"inside"} />
     </div>
   );
 };

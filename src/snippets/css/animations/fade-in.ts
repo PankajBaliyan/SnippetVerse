@@ -1,11 +1,11 @@
-
 export default {
-  id: 'css-fade-in-animation',
-  title: 'Fade In Animation',
-  language: 'css',
-  category: 'animations',
-  description: 'Smooth fade-in animation effect using CSS keyframes and transitions.',
-  shortDescription: 'Smooth fade-in animation effect',
+  id: "css-fade-in-animation",
+  title: "Fade In Animation",
+  language: "css",
+  category: "animations",
+  description:
+    "Smooth fade-in animation effect using CSS keyframes and transitions.",
+  shortDescription: "Smooth fade-in animation effect",
   code: `/* Fade in animation */
 @keyframes fadeIn {
   from {
@@ -46,7 +46,8 @@ export default {
   opacity: 1;
   transform: translateY(0);
 }`,
-  tags: ['css', 'animation', 'fade', 'keyframes', 'transitions'],
-  usage: 'Add these classes to elements that need fade-in animations on page load or scroll.',
-  contributedBy: 'Animation Experts'
+  tags: ["css", "animation", "fade", "keyframes", "transitions"],
+  usage:
+    "Add these classes to elements that need fade-in animations on page load or scroll.",
+  contributedBy: "Animation Experts",
 };

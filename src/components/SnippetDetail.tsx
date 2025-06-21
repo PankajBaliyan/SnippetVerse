@@ -36,9 +36,9 @@ export const SnippetDetail = ({
   };
 
   // on loading component, scroll to top
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="max-w-4xl mx-auto">
@@ -51,7 +51,9 @@ export const SnippetDetail = ({
           <ArrowLeft size={20} />
         </button>
         <div className="flex-1">
-          <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">{snippet.title}</h1>
+          <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
+            {snippet.title}
+          </h1>
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-2">
               <span
@@ -67,12 +69,17 @@ export const SnippetDetail = ({
             </span>
             {snippet.contributedBy && (
               <>
-                <span className="text-sm text-gray-500 dark:text-gray-500">•</span>
+                <span className="text-sm text-gray-500 dark:text-gray-500">
+                  •
+                </span>
                 <div
                   className="flex items-center gap-1 cursor-pointer"
                   onClick={() => handleRedirectToGithub(snippet?.contributedBy)}
                 >
-                  <FaGithub size={14} className="text-gray-500 dark:text-gray-400" />
+                  <FaGithub
+                    size={14}
+                    className="text-gray-500 dark:text-gray-400"
+                  />
                   <span className="text-sm text-gray-600 dark:text-gray-400">
                     @{snippet.contributedBy}
                   </span>
@@ -95,14 +102,20 @@ export const SnippetDetail = ({
 
       {/* Description */}
       <div className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-6 mb-6">
-        <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">Description</h2>
-        <p className="text-gray-600 dark:text-gray-400 leading-relaxed">{snippet.description}</p>
+        <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
+          Description
+        </h2>
+        <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+          {snippet.description}
+        </p>
       </div>
 
       {/* Code */}
       <div className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-6 mb-6">
         <div className="flex items-center justify-between mb-4">
-          <h2 className="text-xl font-semibold text-gray-900 dark:text-white">Code</h2>
+          <h2 className="text-xl font-semibold text-gray-900 dark:text-white">
+            Code
+          </h2>
           <CopyButton text={snippet.code} />
         </div>
         <SyntaxHighlighter code={snippet.code} language={snippet.language} />
@@ -111,14 +124,20 @@ export const SnippetDetail = ({
       {/* Usage */}
       {snippet.usage && (
         <div className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-6 mb-6">
-          <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">How to Use</h2>
-          <p className="text-gray-600 dark:text-gray-400 leading-relaxed">{snippet.usage}</p>
+          <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
+            How to Use
+          </h2>
+          <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+            {snippet.usage}
+          </p>
         </div>
       )}
 
       {/* Tags */}
       <div className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-6">
-        <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">Tags</h2>
+        <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
+          Tags
+        </h2>
         <div className="flex flex-wrap gap-2">
           {snippet.tags.map((tag) => (
             <span

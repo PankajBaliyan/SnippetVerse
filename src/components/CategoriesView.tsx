@@ -1,4 +1,4 @@
-import { CategoryGrid } from "./CategoryGrid";
+import {CategoryGrid} from "./CategoryGrid";
 
 interface CategoriesViewProps {
   selectedLanguage: string;
@@ -24,7 +24,10 @@ export const CategoriesView = ({
         </p>
       </div>
 
-      <CategoryGrid categories={categories} onCategorySelect={onCategorySelect} />
+      <CategoryGrid
+        categories={categories}
+        onCategorySelect={onCategorySelect}
+      />
     </div>
   );
 };

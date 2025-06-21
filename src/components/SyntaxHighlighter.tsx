@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
-import { codeToHtml } from "shiki";
+import {useEffect, useState} from "react";
+import {codeToHtml} from "shiki";
 import "./SyntaxHighlighter.css";
-import { useTheme } from "../hooks/useTheme";
+import {useTheme} from "../hooks/useTheme";
 
 interface SyntaxHighlighterProps {
   code: string;
@@ -73,7 +73,10 @@ const normalizeLanguage = (lang: string): string => {
   return map[normalized] || normalized;
 };
 
-export const SyntaxHighlighter = ({ code, language }: SyntaxHighlighterProps) => {
+export const SyntaxHighlighter = ({
+  code,
+  language,
+}: SyntaxHighlighterProps) => {
   const { theme } = useTheme();
   const [highlightedCode, setHighlightedCode] = useState<string>("");
 

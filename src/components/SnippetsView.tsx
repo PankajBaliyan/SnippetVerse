@@ -1,5 +1,5 @@
-import { SnippetList } from "./SnippetList";
-import { Snippet } from "../data/snippets";
+import {SnippetList} from "./SnippetList";
+import {Snippet} from "../data/snippets";
 
 interface SnippetsViewProps {
   snippets: Snippet[];
@@ -35,15 +35,18 @@ export const SnippetsView = ({
             <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400">
               {selectedLanguage === "all"
                 ? "All Languages"
-                : selectedLanguage.charAt(0).toUpperCase() + selectedLanguage.slice(1)}
-              {searchQuery && !selectedCategory && " • Searching across all categories"}
+                : selectedLanguage.charAt(0).toUpperCase() +
+                  selectedLanguage.slice(1)}
+              {searchQuery &&
+                !selectedCategory &&
+                " • Searching across all categories"}
             </p>
           </div>
         </div>
 
         <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400">
-          {snippets.length !== 0
-            && `Showing ${snippets.length} ${snippets.length === 1 ? "snippet" : "snippets"}`}
+          {snippets.length !== 0 &&
+            `Showing ${snippets.length} ${snippets.length === 1 ? "snippet" : "snippets"}`}
         </p>
       </div>
 
@@ -56,7 +59,9 @@ export const SnippetsView = ({
         />
       ) : (
         <div className="text-center py-8 sm:py-10 md:py-12">
-          <div className="text-4xl sm:text-5xl md:text-6xl mb-3 sm:mb-4">🔍</div>
+          <div className="text-4xl sm:text-5xl md:text-6xl mb-3 sm:mb-4">
+            🔍
+          </div>
           <h3 className="text-base sm:text-lg font-medium text-gray-900 dark:text-white mb-1 sm:mb-2">
             No snippets found
           </h3>

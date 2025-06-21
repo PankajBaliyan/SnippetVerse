@@ -3,8 +3,7 @@ name: 💡 Feature Request
 about: Suggest an idea or improvement
 title: "[Feature] <short title>"
 labels: enhancement
-assignees: ''
-
+assignees: ""
 ---
 
 ## 🧠 What do you want to see added?

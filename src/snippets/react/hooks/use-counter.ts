@@ -1,11 +1,11 @@
-
 export default {
-  id: 'react-use-counter',
-  title: 'useCounter Hook',
-  language: 'react',
-  category: 'hooks',
-  description: 'A custom React hook for managing counter state with increment, decrement, and reset functionality.',
-  shortDescription: 'Custom hook for counter state management',
+  id: "react-use-counter",
+  title: "useCounter Hook",
+  language: "react",
+  category: "hooks",
+  description:
+    "A custom React hook for managing counter state with increment, decrement, and reset functionality.",
+  shortDescription: "Custom hook for counter state management",
   code: `import { useState, useCallback } from 'react';
 
 interface UseCounterReturn {
@@ -46,7 +46,8 @@ export const useCounter = (initialValue: number = 0): UseCounterReturn => {
 
 // Usage example:
 // const { count, increment, decrement, reset } = useCounter(0);`,
-  tags: ['react', 'hooks', 'state', 'counter', 'custom-hook'],
-  usage: 'Use this hook in any React component that needs counter functionality.',
-  contributedBy: 'React Community'
+  tags: ["react", "hooks", "state", "counter", "custom-hook"],
+  usage:
+    "Use this hook in any React component that needs counter functionality.",
+  contributedBy: "React Community",
 };

@@ -35,6 +35,7 @@ const button = domHelpers.createElement('button',
   description:
     "Helper functions for common DOM manipulation tasks including creating elements, adding event listeners, and managing classes.",
   shortDescription: "DOM manipulation utilities",
-  usage: "Use these functions to simplify DOM operations in vanilla JavaScript projects.",
+  usage:
+    "Use these functions to simplify DOM operations in vanilla JavaScript projects.",
   contributedBy: "pankajbaliyan",
 };

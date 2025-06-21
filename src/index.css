@@ -97,7 +97,6 @@
 
 /* Custom responsive utilities */
 @layer utilities {
-
   /* Container utilities for different screen sizes */
   .container-responsive {
     @apply w-full mx-auto px-2 sm:px-4 md:px-6 lg:px-8 xl:px-12 2xl:px-16;

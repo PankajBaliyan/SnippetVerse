@@ -32,7 +32,10 @@ export async function loadSnippets() {
 
     // Load the module
     const module = await loadModule();
-    const snippetData = module.default as Omit<Snippet, "language" | "category" | "filePath">;
+    const snippetData = module.default as Omit<
+      Snippet,
+      "language" | "category" | "filePath"
+    >;
 
     // Add snippet with additional metadata
     snippets.push({

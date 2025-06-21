@@ -6,7 +6,10 @@ interface AppHeaderProps {
   onFavoritesClick?: () => void;
 }
 
-export const AppHeader = ({ onHomeClick, onFavoritesClick }: AppHeaderProps) => {
+export const AppHeader = ({
+  onHomeClick,
+  onFavoritesClick,
+}: AppHeaderProps) => {
   return (
     <header className="bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-2 xs:px-3 sm:px-4 md:px-6 lg:px-8 xl:px-12 2xl:px-16">

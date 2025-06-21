@@ -1,28 +1,20 @@
-
-import { Button } from "@/components/ui/button";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { SearchBar } from "./SearchBar";
+import {Button} from "@/components/ui/button";
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue,} from "@/components/ui/select";
+import {SearchBar} from "./SearchBar";
 import {
   Sidebar,
   SidebarContent,
   SidebarGroup,
   SidebarGroupContent,
   SidebarGroupLabel,
+  SidebarHeader,
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
   SidebarProvider,
-  SidebarHeader,
   useSidebar,
 } from "@/components/ui/sidebar";
-import {
-  Sparkles,
-  Folder,
-  Search,
-  PanelLeftClose,
-  PanelLeftOpen,
-  Languages,
-} from "lucide-react";
+import {Folder, Languages, PanelLeftClose, PanelLeftOpen, Search, Sparkles,} from "lucide-react";
 import {useEffect} from "react";
 
 interface CategorySidebarProps {
@@ -48,12 +40,12 @@ const CategorySidebarContent = ({
 }: CategorySidebarProps) => {
   const { toggleSidebar, state } = useSidebar();
 
-  useEffect(()=> {
+  useEffect(() => {
     // selectedLanguage not found in list, set to "all"
     if (selectedLanguage && !languages.includes(selectedLanguage)) {
       onLanguageChange("all");
     }
-  }, [selectedLanguage,languages])
+  }, [selectedLanguage, languages]);
 
   return (
     <Sidebar
@@ -118,7 +110,11 @@ const CategorySidebarContent = ({
                 <SelectContent>
                   <SelectItem value="all">All Languages</SelectItem>
                   {languages.map((language) => (
-                    <SelectItem key={language} value={language} className="capitalize">
+                    <SelectItem
+                      key={language}
+                      value={language}
+                      className="capitalize"
+                    >
                       {language}
                     </SelectItem>
                   ))}

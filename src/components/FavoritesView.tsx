@@ -1,8 +1,7 @@
-
-import { useMemo } from "react";
-import { SnippetList } from "./SnippetList";
-import { Snippet } from "../data/snippets";
-import { Heart } from "lucide-react";
+import {useMemo} from "react";
+import {SnippetList} from "./SnippetList";
+import {Snippet} from "../data/snippets";
+import {Heart} from "lucide-react";
 
 interface FavoritesViewProps {
   allSnippets: Snippet[];
@@ -18,7 +17,7 @@ export const FavoritesView = ({
   onToggleFavorite,
 }: FavoritesViewProps) => {
   const favoriteSnippets = useMemo(() => {
-    return allSnippets.filter(snippet => favorites.includes(snippet.id));
+    return allSnippets.filter((snippet) => favorites.includes(snippet.id));
   }, [allSnippets, favorites]);
 
   return (
@@ -54,7 +53,9 @@ export const FavoritesView = ({
         />
       ) : (
         <div className="text-center py-8 sm:py-10 md:py-12">
-          <div className="text-4xl sm:text-5xl md:text-6xl mb-3 sm:mb-4">❤️</div>
+          <div className="text-4xl sm:text-5xl md:text-6xl mb-3 sm:mb-4">
+            ❤️
+          </div>
           <h3 className="text-base sm:text-lg font-medium text-gray-900 dark:text-white mb-1 sm:mb-2">
             No favorites yet
           </h3>

@@ -1,4 +1,3 @@
-
 export default {
   id: "js-array-helpers",
   title: "Array Helper Functions",
@@ -27,9 +26,11 @@ const arrayHelpers = {
 const numbers = [1, 2, 2, 3, 4, 4, 5];
 console.log(arrayHelpers.unique(numbers)); // [1, 2, 3, 4, 5]
 console.log(arrayHelpers.chunk(numbers, 3)); // [[1, 2, 2], [3, 4, 4], [5]]`,
-  description: "A collection of utility functions for common array operations including removing duplicates, chunking, flattening, and getting random elements.",
+  description:
+    "A collection of utility functions for common array operations including removing duplicates, chunking, flattening, and getting random elements.",
   shortDescription: "Utility functions for array manipulation",
   tags: ["array", "utilities", "helpers", "functional"],
-  usage: "Import and use these helper functions in your JavaScript projects for common array operations.",
-  contributedBy: "JavaScript Community"
+  usage:
+    "Import and use these helper functions in your JavaScript projects for common array operations.",
+  contributedBy: "JavaScript Community",
 };

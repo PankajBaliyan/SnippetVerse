@@ -3,8 +3,7 @@ name: 🐞 Bug Report
 about: Report a problem or unexpected behavior
 title: "[Bug] <brief summary>"
 labels: bug
-assignees: ''
-
+assignees: ""
 ---
 
 ## 🧠 What went wrong?

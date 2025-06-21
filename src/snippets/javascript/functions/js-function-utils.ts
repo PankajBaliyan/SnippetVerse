@@ -50,8 +50,10 @@ export default {
   }, 300));`,
   description:
     "A set of handy utilities for function control, including debounce, throttle, and once to improve performance and prevent redundant calls.",
-  shortDescription: "Debounce, throttle, and once helpers for JavaScript functions",
+  shortDescription:
+    "Debounce, throttle, and once helpers for JavaScript functions",
   tags: ["functions", "utilities", "debounce", "throttle", "once"],
-  usage: "Import and use these helpers to manage how often your functions are invoked.",
+  usage:
+    "Import and use these helpers to manage how often your functions are invoked.",
   contributedBy: "JavaScript Community",
 };

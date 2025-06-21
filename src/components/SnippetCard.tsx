@@ -1,6 +1,6 @@
-import { useState } from "react";
-import { CopyButton } from "./CopyButton";
-import { Heart } from "lucide-react";
+import {useState} from "react";
+import {CopyButton} from "./CopyButton";
+import {Heart} from "lucide-react";
 
 interface SnippetCardProps {
   id: string;
@@ -62,7 +62,11 @@ export const SnippetCard = ({
               : "text-gray-400 hover:text-red-500 hover:bg-gray-50 dark:hover:bg-gray-700"
           }`}
         >
-          <Heart size={14} className="sm:w-4 sm:h-4" fill={isFavorite ? "currentColor" : "none"} />
+          <Heart
+            size={14}
+            className="sm:w-4 sm:h-4"
+            fill={isFavorite ? "currentColor" : "none"}
+          />
         </button>
       </div>
 

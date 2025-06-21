@@ -1,11 +1,11 @@
-
 export default {
-  id: 'react-button-component',
-  title: 'Reusable Button Component',
-  language: 'react',
-  category: 'components',
-  description: 'A reusable button component with different variants and sizes for React applications.',
-  shortDescription: 'Reusable button component with variants',
+  id: "react-button-component",
+  title: "Reusable Button Component",
+  language: "react",
+  category: "components",
+  description:
+    "A reusable button component with different variants and sizes for React applications.",
+  shortDescription: "Reusable button component with variants",
   code: `import React from 'react';
 import { cn } from '@/lib/utils';
 
@@ -46,7 +46,8 @@ export const Button: React.FC<ButtonProps> = ({
     </button>
   );
 };`,
-  tags: ['react', 'component', 'button', 'ui', 'reusable'],
-  usage: 'Import and use this button component throughout your React application for consistent styling and behavior.',
-  contributedBy: 'React Team'
+  tags: ["react", "component", "button", "ui", "reusable"],
+  usage:
+    "Import and use this button component throughout your React application for consistent styling and behavior.",
+  contributedBy: "React Team",
 };

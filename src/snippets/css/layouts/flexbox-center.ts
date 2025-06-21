@@ -1,11 +1,11 @@
-
 export default {
-  id: 'css-flexbox-center',
-  title: 'Flexbox Perfect Center',
-  language: 'css',
-  category: 'layouts',
-  description: 'CSS snippet to perfectly center content both horizontally and vertically using flexbox.',
-  shortDescription: 'Perfect center alignment with flexbox',
+  id: "css-flexbox-center",
+  title: "Flexbox Perfect Center",
+  language: "css",
+  category: "layouts",
+  description:
+    "CSS snippet to perfectly center content both horizontally and vertically using flexbox.",
+  shortDescription: "Perfect center alignment with flexbox",
   code: `.flex-center {
   display: flex;
   justify-content: center;
@@ -29,7 +29,8 @@ export default {
   text-align: center;
   min-height: 100vh;
 }`,
-  tags: ['css', 'flexbox', 'center', 'layout', 'alignment'],
-  usage: 'Apply these classes to containers that need perfect centering of their content.',
-  contributedBy: 'CSS Community'
+  tags: ["css", "flexbox", "center", "layout", "alignment"],
+  usage:
+    "Apply these classes to containers that need perfect centering of their content.",
+  contributedBy: "CSS Community",
 };

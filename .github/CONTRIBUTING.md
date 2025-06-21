@@ -5,19 +5,19 @@ Hey there! Thanks for stopping by and considering contributing to this project. 
 ## 📚 Table of Contents
 
 - [Contributing to SnippetVerse 🤝](#contributing-to-snippetverse-)
-    - [📚 Table of Contents](#-table-of-contents)
-    - [👀 What We're Looking For](#-what-were-looking-for)
-    - [🖋️ Snippet Guidelines](#️-snippet-guidelines)
-        - [📂 Folder Structure](#-folder-structure)
-        - [🗃️ File Type](#️-file-type)
-        - [🔄 What Goes Inside](#-what-goes-inside)
-        - [❗ Important Notes](#-important-notes)
-    - [🛠️ How to Contribute](#️-how-to-contribute)
-        - [✔️ Submitting Snippets](#️-submitting-snippets)
-        - [➕ Adding Languages or Categories](#-adding-languages-or-categories)
-            - [🌐 New Language](#-new-language)
-            - [📂 New Category](#-new-category)
-        - [Submitting Your Work](#submitting-your-work)
+  - [📚 Table of Contents](#-table-of-contents)
+  - [👀 What We're Looking For](#-what-were-looking-for)
+  - [🖋️ Snippet Guidelines](#️-snippet-guidelines)
+    - [📂 Folder Structure](#-folder-structure)
+    - [🗃️ File Type](#️-file-type)
+    - [🔄 What Goes Inside](#-what-goes-inside)
+    - [❗ Important Notes](#-important-notes)
+  - [🛠️ How to Contribute](#️-how-to-contribute)
+    - [✔️ Submitting Snippets](#️-submitting-snippets)
+    - [➕ Adding Languages or Categories](#-adding-languages-or-categories)
+      - [🌐 New Language](#-new-language)
+      - [📂 New Category](#-new-category)
+    - [Submitting Your Work](#submitting-your-work)
 
 ## 👀 What We're Looking For
 
@@ -40,12 +40,12 @@ snippets/language/category/snippet.tsx
 Here's how it breaks down:
 
 - **`language`**: Lowercase only. For example:
-    - `JavaScript` → `javascript`
-    - `c++` → `cpp`
-    - `c#` → `cs`
+  - `JavaScript` → `javascript`
+  - `c++` → `cpp`
+  - `c#` → `cs`
 - **`category`**: Lowercase only. For example:
-    - `Array` → `array`
-    - `DOM` → `dom`
+  - `Array` → `array`
+  - `DOM` → `dom`
 - **`snippet`**: Use [kebab-case](https://developer.mozilla.org/en-US/docs/Glossary/Kebab_case). Example: `lorem-ipsum`.
 
 ### 🗃️ File Type
@@ -67,7 +67,7 @@ export default {
   description: "Detailed explanation of what the snippet does.",
   shortDescription: "One-liner overview.",
   usage: "Describe how this snippet can be used.",
-  contributedBy: "your-github-username" // i.e., PankajBaliyan
+  contributedBy: "your-github-username", // i.e., PankajBaliyan
 };
 ```
 
@@ -103,13 +103,13 @@ You can submit snippets manually:
 #### 🌐 New Language
 
 1. Create a folder in `snippets/` using lowercase.
-    - Examples: `javascript`, `python`, `rust`
+   - Examples: `javascript`, `python`, `rust`
 2. Add relevant categories inside.
 
 #### 📂 New Category
 
 1. Inside the language folder, create a category folder using kebab-case.
-    - Example: `string-manipulation`, `data-structures`
+   - Example: `string-manipulation`, `data-structures`
 
 ### Submitting Your Work
 

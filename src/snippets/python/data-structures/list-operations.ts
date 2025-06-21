@@ -1,4 +1,3 @@
-
 export default {
   id: "py-list-operations",
   title: "Python List Operations",
@@ -27,8 +26,10 @@ list1 = [1, 2, 3]
 list2 = [4, 5, 6]
 combined = list1 + list2       # [1, 2, 3, 4, 5, 6]
 zipped = list(zip(list1, list2)) # [(1, 4), (2, 5), (3, 6)]`,
-  description: "Comprehensive guide to Python list operations including comprehensions, methods, slicing, and combining lists.",
+  description:
+    "Comprehensive guide to Python list operations including comprehensions, methods, slicing, and combining lists.",
   shortDescription: "Python list manipulation techniques",
   tags: ["python", "lists", "data-structures", "comprehensions"],
-  usage: "Use these patterns for efficient list manipulation in Python projects."
+  usage:
+    "Use these patterns for efficient list manipulation in Python projects.",
 };
