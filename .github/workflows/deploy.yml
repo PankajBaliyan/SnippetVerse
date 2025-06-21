@@ -1,0 +1,91 @@
+name: Build and Deploy SnippetVerse App (Production)
+
+on:
+  push:
+    branches:
+      - main # Trigger deployment on push to the main branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout the repository
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      # Step 2: Set up Node.js environment
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20' # Adjust Node.js version if needed
+
+      # Step 3: Create .env.production file with GitHub Secrets
+      #      - name: Create .env.production file
+      #        run: |
+      #          echo "VITE_APP_BACKEND_URL=${{ secrets.VITE_APP_BACKEND_URL }}" >> .env.production
+
+      # Step 4: Install dependencies
+      - name: Install dependencies
+        run: npm install
+
+      # Step 5: Build the Vite app
+      - name: Build project
+        run: npm run build # This will generate the production build in the "dist" folder
+
+      # Step 6: Clean remote folder except .htaccess
+      - name: Clean remote folder except .htaccess
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USER }}
+          password: ${{ secrets.SERVER_PASSWORD }}
+          port: 65002 # Specify your custom port here
+          script: |
+            if [ -d domains/pankajdev.in/public_html/SnippetVerse ]; then
+              echo "🌟 Directory exists. Cleaning files... 🧹"
+              cd domains/pankajdev.in/public_html/SnippetVerse
+              find . -maxdepth 1 ! -name ".htaccess" -exec rm -rf {} +
+              echo "✨ Contents after deletion:"
+              ls -la
+              echo "✅ Files cleaned successfully! Ready for new deployment 🚀"
+            else
+              echo "❌ Directory does not exist. Please create /domains/pankajdev.in/public_html/SnippetVerse."
+            fi
+
+      # Step 7: Upload the build folder to the server via SFTP
+      - name: Upload via SFTP
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.SERVER_HOST }} # Server's IP address or hostname (set in GitHub Secrets)
+          username: ${{ secrets.SERVER_USER }} # SFTP username (set in GitHub Secrets)
+          password: ${{ secrets.SERVER_PASSWORD }} # SFTP password (set in GitHub Secrets)
+          port: 65002 # Specify your custom port here
+          source: 'dist/' # Local build folder (default for Vite is "dist/")
+          target: 'domains/pankajdev.in/public_html/SnippetVerse' # Remote folder where you want to deploy the files
+          strip_components: 1 # This option ensures that the directory structure in the source is preserved in the target
+          debug: true # Enable debug output to help troubleshoot issues
+
+        # Step 8: Post-upload message
+      - name: Post-upload message
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USER }}
+          password: ${{ secrets.SERVER_PASSWORD }}
+          port: 65002 # Specify your custom port here if needed
+          script: |
+            echo "🎉 Deployment Complete! Your new build is live at /domains/pankajdev.in/public_html/SnippetVerse 🎉"
+            echo "🔄 Refresh the page to see the changes! 🌐"
+
+        # Step 9: Optional - Restart the server or perform post-deployment tasks
+        # - name: Run post-deployment commands via SSH
+        #   uses: appleboy/ssh-action@master
+        #   with:
+        #     host: ${{ secrets.SERVER_HOST }}
+        #     username: ${{ secrets.SERVER_USER }}
+        #     password: ${{ secrets.SERVER_PASSWORD }}
+        #     script: |
+        #       cd /domains/pankajdev.in/public_html/SnippetVerse
+        #       # Example: Run any necessary post-deployment commands here
+        #       pm2 restart my-app  # If you're using pm2 or a similar tool to manage your app

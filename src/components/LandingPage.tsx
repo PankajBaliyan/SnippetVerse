@@ -313,16 +313,16 @@ export const LandingPage = ({
                 <div className="relative">
                   <pre className="bg-gray-900 dark:bg-gray-950 rounded-lg p-4 text-sm overflow-x-auto border border-gray-200 dark:border-gray-700">
                     <code className="text-gray-300">
-                      {snippet.code.slice(0, 120)}...
+                      {snippet?.code?.slice(0, 120)}...
                     </code>
                   </pre>
                   <div className="absolute top-3 right-3">
-                    <CopyButton text={snippet.code} />
+                    <CopyButton text={snippet?.code} />
                   </div>
                 </div>
 
                 <div className="flex flex-wrap gap-2 mt-4">
-                  {snippet.tags.slice(0, 3).map((tag) => (
+                  {snippet?.tags?.slice(0, 3)?.map((tag) => (
                     <span
                       key={tag}
                       className="px-3 py-1 text-xs bg-blue-100 dark:bg-blue-900/20 text-blue-800 dark:text-blue-300 rounded-full"
