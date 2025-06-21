@@ -48,7 +48,7 @@ npm run dev
 bun run dev
 ```
 
-Open [http://localhost:5173](http://localhost:5173) in your browser.
+Open [http://localhost:8080](http://localhost:8080) in your browser.
 
 ### Build for Production
 
@@ -114,4 +114,4 @@ Built by [pankajkumar](https://github.com/PankajBaliyan) and [the contributors](
 
 ---
 
-> © 2024 SnippetVerse. Made with ❤️ for developers
+> © 2025 SnippetVerse. Made with ❤️ for developers
