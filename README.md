@@ -69,18 +69,35 @@ bun run preview
 ## 📁 Project Structure
 
 ```
-src/
-  components/      # UI components (Header, SnippetCard, etc.)
-  data/            # Static snippet data
-  hooks/           # Custom React hooks
-  pages/           # Page-level components
-  snippets/        # (Optional) Dynamic snippet loading
-  utils/           # Utility functions
-  App.tsx          # Main app component
-  main.tsx         # Entry point
-public/
-  index.html       # HTML template
-  ...
+├── public
+│   ├── images
+│   └── svgs
+└── src
+├── components # UI components (Header, SnippetCard, etc.)
+│   └── ui
+├── data        # Static data
+├── hooks       # Custom React hooks
+├── lib         # Utility functions and libraries
+├── pages       # Main application pages
+├── snippets    # snippets organized by language and category
+│   ├── css     # Language-specific snippets
+│   │   ├── animations  # Categorie 1
+│   │   └── layouts     # Categorie 2
+│   ├── javascript
+│   │   ├── array
+│   │   ├── dom
+│   │   └── functions
+│   ├── nodejs
+│   │   └── functions
+│   ├── python
+│   │   └── data-structures
+│   ├── react
+│   │   ├── components
+│   │   └── hooks
+│   └── regex
+└── utils
+
+32 directories
 ```
 
 ## 📝 Contributing
@@ -93,7 +110,7 @@ This project is [MIT licensed](LICENSE).
 
 ## 🙏 Credits
 
-Built by [pankajkumar](https://github.com/pankajkumar) and [the contributors](https://github.com/pankajkumar/snippetverse/contributors).
+Built by [pankajkumar](https://github.com/PankajBaliyan) and [the contributors](https://github.com/PankajBaliyan/SnippetVerse/graphs/contributors).
 
 ---
 
