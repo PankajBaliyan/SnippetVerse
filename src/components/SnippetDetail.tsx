@@ -1,8 +1,8 @@
-import { ArrowLeft, Heart, User, GithubIcon } from "lucide-react";
-import { CopyButton } from "./CopyButton";
-import { SyntaxHighlighter } from "./SyntaxHighlighter";
-import { Snippet } from "../data/snippets";
-import { FaGithub } from "react-icons/fa";
+import {ArrowLeft, Heart} from "lucide-react";
+import {CopyButton} from "./CopyButton";
+import {SyntaxHighlighter} from "./SyntaxHighlighter";
+import {Snippet} from "../data/snippets";
+import {FaGithub} from "react-icons/fa";
 import {useEffect} from "react";
 
 interface SnippetDetailProps {
