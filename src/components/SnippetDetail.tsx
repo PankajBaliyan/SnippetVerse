@@ -3,6 +3,7 @@ import { CopyButton } from "./CopyButton";
 import { SyntaxHighlighter } from "./SyntaxHighlighter";
 import { Snippet } from "../data/snippets";
 import { FaGithub } from "react-icons/fa";
+import {useEffect} from "react";
 
 interface SnippetDetailProps {
   snippet: Snippet;
@@ -33,6 +34,11 @@ export const SnippetDetail = ({
     const link = `https://github.com/${username}`;
     window.open(link, "_blank");
   };
+
+  // on loading component, scroll to top
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
   return (
     <div className="max-w-4xl mx-auto">

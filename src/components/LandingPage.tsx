@@ -40,7 +40,7 @@ export const LandingPage = ({
   const randomSnippets = useMemo(() => {
     const shuffled = [...allLoadedSnippets].sort(() => 0.5 - Math.random());
     return shuffled.slice(0, 6);
-  }, []);
+  }, [allLoadedSnippets]);
 
   const getLanguageColor = (lang: string) => {
     // Simplified color palette - just gray variations
@@ -283,8 +283,7 @@ export const LandingPage = ({
             {randomSnippets.map((snippet) => (
               <div
                 key={snippet.id}
-                className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-6 hover:border-blue-300 dark:hover:border-blue-600 transition-all duration-200 cursor-pointer hover:shadow-lg transform hover:-translate-y-1"
-                onClick={() => onSnippetClick?.(snippet)}
+                className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-6 hover:border-blue-300 dark:hover:border-blue-600 transition-all duration-200  hover:shadow-lg transform hover:-translate-y-1"
               >
                 <div className="flex items-center gap-3 mb-4">
                   <span className="inline-block w-3 h-3 rounded-full bg-blue-600"></span>
@@ -330,7 +329,7 @@ export const LandingPage = ({
                 </div>
 
                 <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
-                  <span className="text-sm text-blue-600 dark:text-blue-400 font-medium hover:text-blue-700 dark:hover:text-blue-300 transition-colors">
+                  <span className="text-sm text-blue-600 dark:text-blue-400 font-medium hover:text-blue-700 dark:hover:text-blue-300 transition-colors cursor-pointer" onClick={() => onSnippetClick?.(snippet)}>
                     View Details →
                   </span>
                 </div>

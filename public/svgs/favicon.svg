@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+    <!-- Rounded light blue background -->
+    <rect x="0" y="0" width="64" height="64" rx="12" ry="12" fill="#EEF6FF"/>
+
+    <!-- Code icon -->
+    <path d="M24 20 L16 32 L24 44" fill="none" stroke="#2563EB" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M40 20 L48 32 L40 44" fill="none" stroke="#2563EB" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
