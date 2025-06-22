@@ -1,7 +1,17 @@
-import {useMemo} from "react";
-import {ArrowRight, Book, Code, Globe, Plus, Search, Star, Users, Zap,} from "lucide-react";
-import {CopyButton} from "./CopyButton";
-import {AppHeader} from "./AppHeader";
+import { useMemo } from "react";
+import {
+  ArrowRight,
+  Book,
+  Code,
+  Globe,
+  Plus,
+  Search,
+  Star,
+  Users,
+  Zap,
+} from "lucide-react";
+import { CopyButton } from "./CopyButton";
+import { AppHeader } from "./AppHeader";
 import Footer from "@/components/Footer.tsx";
 
 interface Snippet {
@@ -125,6 +135,21 @@ export const LandingPage = ({
             <h1 className="text-5xl md:text-7xl font-bold mb-6 text-gray-900 dark:text-white">
               SnippetVerse
             </h1>
+            <div className="flex justify-center mb-6">
+              <a
+                href="https://www.producthunt.com/products/snippetverse?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-snippetverse"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=981902&theme=light&t=1750574441940"
+                  alt="SnippetVerse - Open&#0045;source&#0046;&#0032;Local&#0045;first&#0046;&#0032;Beautiful&#0032;snippet&#0032;manager&#0046; | Product Hunt"
+                  style={{ width: "250px", height: "54px" }}
+                  width="250"
+                  height="54"
+                />
+              </a>
+            </div>
 
             <p className="text-xl md:text-2xl mb-12 text-gray-600 dark:text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Your ultimate destination for code snippets. Browse, search, and
