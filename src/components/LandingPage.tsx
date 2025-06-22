@@ -1,17 +1,7 @@
-import { useMemo } from "react";
-import {
-  ArrowRight,
-  Book,
-  Code,
-  Globe,
-  Plus,
-  Search,
-  Star,
-  Users,
-  Zap,
-} from "lucide-react";
-import { CopyButton } from "./CopyButton";
-import { AppHeader } from "./AppHeader";
+import {useMemo} from "react";
+import {ArrowRight, Book, Code, Globe, Plus, Search, Star, Users, Zap,} from "lucide-react";
+import {CopyButton} from "./CopyButton";
+import {AppHeader} from "./AppHeader";
 import Footer from "@/components/Footer.tsx";
 
 interface Snippet {
@@ -137,16 +127,16 @@ export const LandingPage = ({
             </h1>
             <div className="flex justify-center mb-6">
               <a
-                href="https://www.producthunt.com/products/snippetverse?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-snippetverse"
-                target="_blank"
-                rel="noopener noreferrer"
+                  href="https://www.producthunt.com/products/snippetverse?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-snippetverse"
+                  target="_blank"
+                  rel="noopener noreferrer"
               >
                 <img
-                  src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=981902&theme=light&t=1750574441940"
-                  alt="SnippetVerse - Open&#0045;source&#0046;&#0032;Local&#0045;first&#0046;&#0032;Beautiful&#0032;snippet&#0032;manager&#0046; | Product Hunt"
-                  style={{ width: "250px", height: "54px" }}
-                  width="250"
-                  height="54"
+                    src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=981902&theme=light&t=1750574441940"
+                    alt="SnippetVerse - Open&#0045;source&#0046;&#0032;Local&#0045;first&#0046;&#0032;Beautiful&#0032;snippet&#0032;manager&#0046; | Product Hunt"
+                    style={{width: "250px", height: "54px"}}
+                    width="250"
+                    height="54"
                 />
               </a>
             </div>
@@ -394,19 +384,22 @@ export const LandingPage = ({
               </p>
               <div className="flex space-x-6">
                 <a
-                  href="#"
+                  href="https://github.com/PankajBaliyan/SnippetVerse"
+                    target="_blank"
                   className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                 >
                   GitHub
                 </a>
                 <a
-                  href="#"
+                  href="https://discord.gg/UsHKk7NqkE"
+                    target="_blank"
                   className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                 >
                   Discord
                 </a>
                 <a
-                  href="#"
+                  href="https://x.com/_Pankaj_kumar__"
+                    target="_blank"
                   className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                 >
                   Twitter
@@ -419,16 +412,16 @@ export const LandingPage = ({
                 Features
               </h4>
               <ul className="space-y-2 text-gray-600 dark:text-gray-400">
-                <li className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors cursor-pointer">
+                <li className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
                   Code Snippets
                 </li>
-                <li className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors cursor-pointer">
+                <li className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
                   Smart Search
                 </li>
-                <li className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors cursor-pointer">
+                <li className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
                   Favorites
                 </li>
-                <li className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors cursor-pointer">
+                <li className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
                   Dark Mode
                 </li>
               </ul>
@@ -439,16 +432,16 @@ export const LandingPage = ({
                 Languages
               </h4>
               <ul className="space-y-2 text-gray-600 dark:text-gray-400">
-                <li className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors cursor-pointer">
+                <li className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
                   JavaScript
                 </li>
-                <li className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors cursor-pointer">
+                <li className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
                   Python
                 </li>
-                <li className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors cursor-pointer">
+                <li className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
                   React
                 </li>
-                <li className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors cursor-pointer">
+                <li className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
                   TypeScript
                 </li>
               </ul>
