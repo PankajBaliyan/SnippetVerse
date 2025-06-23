@@ -50,7 +50,7 @@ export const SnippetsView = ({
         </p>
       </div>
 
-      {snippets.length > 0 ? (
+      {snippets?.length > 0 ? (
         <SnippetList
           snippets={snippets}
           onSnippetClick={onSnippetClick}
