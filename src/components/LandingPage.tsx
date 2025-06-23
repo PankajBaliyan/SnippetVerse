@@ -139,6 +139,13 @@ export const LandingPage = ({
                     height="54"
                 />
               </a>
+              {/*<a href="https://tinylaun.ch" target="_blank" rel="noopener">*/}
+              {/*  <img src="https://tinylaun.ch/tinylaunch_badge_launching_soon.svg"*/}
+              {/*       alt="TinyLaunch Badge"*/}
+              {/*       style={{width: "200px", height: "54px"}}*/}
+
+              {/*       />*/}
+              {/*</a>*/}
             </div>
 
             <p className="text-xl md:text-2xl mb-12 text-gray-600 dark:text-gray-400 max-w-4xl mx-auto leading-relaxed">
@@ -385,21 +392,21 @@ export const LandingPage = ({
               <div className="flex space-x-6">
                 <a
                   href="https://github.com/PankajBaliyan/SnippetVerse"
-                    target="_blank"
+                  target="_blank"
                   className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                 >
                   GitHub
                 </a>
                 <a
                   href="https://discord.gg/UsHKk7NqkE"
-                    target="_blank"
+                  target="_blank"
                   className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                 >
                   Discord
                 </a>
                 <a
                   href="https://x.com/_Pankaj_kumar__"
-                    target="_blank"
+                  target="_blank"
                   className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                 >
                   Twitter
