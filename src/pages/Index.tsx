@@ -23,6 +23,7 @@ import {Toaster} from "sonner";
 import {LanguagesView} from "@/components/LanguagesView";
 import {loadSnippets} from "@/utils/loadSnippetsDynamic";
 import Footer from "@/components/Footer.tsx";
+import {sortArrayByKey} from "@/utils/CommonFunctions.ts";
 
 type ViewState =
   | "landing"
@@ -122,6 +123,7 @@ const IndexContent = () => {
     if (allData) {
       // Filter snippets based on selected language and category
       let filteredSnippets = allData?.preloadedSnippets || [];
+      filteredSnippets = sortArrayByKey(filteredSnippets, 'title')
 
       if (selectedLanguage && selectedLanguage !== "all") {
         filteredSnippets = filteredSnippets.filter(
