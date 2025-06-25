@@ -2,17 +2,17 @@ import {Button} from "@/components/ui/button";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue,} from "@/components/ui/select";
 import {SearchBar} from "./SearchBar";
 import {
-  Sidebar,
-  SidebarContent,
-  SidebarGroup,
-  SidebarGroupContent,
-  SidebarGroupLabel,
-  SidebarHeader,
-  SidebarMenu,
-  SidebarMenuButton,
-  SidebarMenuItem,
-  SidebarProvider,
-  useSidebar,
+    Sidebar,
+    SidebarContent,
+    SidebarGroup,
+    SidebarGroupContent,
+    SidebarGroupLabel,
+    SidebarHeader,
+    SidebarMenu,
+    SidebarMenuButton,
+    SidebarMenuItem,
+    SidebarProvider,
+    useSidebar,
 } from "@/components/ui/sidebar";
 import {Folder, Languages, PanelLeftClose, PanelLeftOpen, Search, Sparkles,} from "lucide-react";
 import {useEffect} from "react";
@@ -178,7 +178,7 @@ const CategorySidebarContent = ({
                     <span>All Categories</span>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
-                {categories.map((category) => (
+                  {categories?.map((category) => (
                   <SidebarMenuItem key={category}>
                     <SidebarMenuButton
                       onClick={() => onCategorySelect(category)}
