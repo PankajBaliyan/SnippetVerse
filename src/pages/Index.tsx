@@ -23,7 +23,7 @@ import {Toaster} from "sonner";
 import {LanguagesView} from "@/components/LanguagesView";
 import {loadSnippets} from "@/utils/loadSnippetsDynamic";
 import Footer from "@/components/Footer.tsx";
-import {sortArrayByKey} from "@/utils/CommonFunctions.ts";
+import {sortArrayByKey, sortArrayWithoutKey} from "@/utils/CommonFunctions.ts";
 
 type ViewState =
   | "landing"
@@ -105,12 +105,14 @@ const IndexContent = () => {
     if (allData) {
       // If selectedLanguage is "all", we can show all categories
       if (selectedLanguage === "all") {
-        setDynamicCategories(allData?.allCategories);
+          const data = allData?.allCategories || [];
+        setDynamicCategories(sortArrayWithoutKey(data));
       } else {
         // Filter categories based on selected language
         const categoriesForLanguage =
           allData?.languageCategories[selectedLanguage] || [];
-        setDynamicCategories(categoriesForLanguage);
+
+        setDynamicCategories(sortArrayWithoutKey(categoriesForLanguage));
       }
 
       // Load all snippets

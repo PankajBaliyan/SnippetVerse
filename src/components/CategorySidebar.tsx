@@ -178,7 +178,7 @@ const CategorySidebarContent = ({
                     <span>All Categories</span>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
-                {categories.map((category) => (
+                {categories?.map((category) => (
                   <SidebarMenuItem key={category}>
                     <SidebarMenuButton
                       onClick={() => onCategorySelect(category)}
