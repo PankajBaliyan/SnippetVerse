@@ -11,12 +11,12 @@ import {ThemeProvider} from "../hooks/useTheme";
 import {useFavorites} from "../hooks/useFavorites";
 import {searchSnippets, Snippet} from "../data/snippets";
 import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
+    Breadcrumb,
+    BreadcrumbItem,
+    BreadcrumbLink,
+    BreadcrumbList,
+    BreadcrumbPage,
+    BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import {SidebarProvider} from "@/components/ui/sidebar";
 import {Toaster} from "sonner";
@@ -106,13 +106,13 @@ const IndexContent = () => {
       // If selectedLanguage is "all", we can show all categories
       if (selectedLanguage === "all") {
           const data = allData?.allCategories || [];
-        setDynamicCategories(sortArrayWithoutKey(data));
+          setDynamicCategories(sortArrayWithoutKey(data));
       } else {
         // Filter categories based on selected language
         const categoriesForLanguage =
           allData?.languageCategories[selectedLanguage] || [];
 
-        setDynamicCategories(sortArrayWithoutKey(categoriesForLanguage));
+          setDynamicCategories(sortArrayWithoutKey(categoriesForLanguage));
       }
 
       // Load all snippets
