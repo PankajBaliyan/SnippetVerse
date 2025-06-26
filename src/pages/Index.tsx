@@ -1,29 +1,32 @@
-import React, {useEffect, useMemo, useState} from "react";
-import {useNavigate, useSearchParams} from "react-router-dom";
-import {AppHeader} from "../components/AppHeader";
-import {CategoriesView} from "../components/CategoriesView";
-import {SnippetsView} from "../components/SnippetsView";
-import {SnippetDetail} from "../components/SnippetDetail";
-import {CategorySidebar} from "../components/CategorySidebar";
-import {LandingPage} from "../components/LandingPage";
-import {FavoritesView} from "../components/FavoritesView";
-import {ThemeProvider} from "../hooks/useTheme";
-import {useFavorites} from "../hooks/useFavorites";
-import {searchSnippets, Snippet} from "../data/snippets";
+import React, { useEffect, useMemo, useState } from "react";
+import { useNavigate, useSearchParams } from "react-router-dom";
+import { AppHeader } from "../components/AppHeader";
+import { CategoriesView } from "../components/CategoriesView";
+import { SnippetsView } from "../components/SnippetsView";
+import { SnippetDetail } from "../components/SnippetDetail";
+import { CategorySidebar } from "../components/CategorySidebar";
+import { LandingPage } from "../components/LandingPage";
+import { FavoritesView } from "../components/FavoritesView";
+import { ThemeProvider } from "../hooks/useTheme";
+import { useFavorites } from "../hooks/useFavorites";
+import { searchSnippets, Snippet } from "../data/snippets";
 import {
-    Breadcrumb,
-    BreadcrumbItem,
-    BreadcrumbLink,
-    BreadcrumbList,
-    BreadcrumbPage,
-    BreadcrumbSeparator,
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
-import {SidebarProvider} from "@/components/ui/sidebar";
-import {Toaster} from "sonner";
-import {LanguagesView} from "@/components/LanguagesView";
-import {loadSnippets} from "@/utils/loadSnippetsDynamic";
+import { SidebarProvider } from "@/components/ui/sidebar";
+import { Toaster } from "sonner";
+import { LanguagesView } from "@/components/LanguagesView";
+import { loadSnippets } from "@/utils/loadSnippetsDynamic";
 import Footer from "@/components/Footer.tsx";
-import {sortArrayByKey, sortArrayWithoutKey} from "@/utils/CommonFunctions.ts";
+import {
+  sortArrayByKey,
+  sortArrayWithoutKey,
+} from "@/utils/CommonFunctions.ts";
 
 type ViewState =
   | "landing"
@@ -105,14 +108,14 @@ const IndexContent = () => {
     if (allData) {
       // If selectedLanguage is "all", we can show all categories
       if (selectedLanguage === "all") {
-          const data = allData?.allCategories || [];
-          setDynamicCategories(sortArrayWithoutKey(data));
+        const data = allData?.allCategories || [];
+        setDynamicCategories(sortArrayWithoutKey(data));
       } else {
         // Filter categories based on selected language
         const categoriesForLanguage =
           allData?.languageCategories[selectedLanguage] || [];
 
-          setDynamicCategories(sortArrayWithoutKey(categoriesForLanguage));
+        setDynamicCategories(sortArrayWithoutKey(categoriesForLanguage));
       }
 
       // Load all snippets
@@ -125,7 +128,7 @@ const IndexContent = () => {
     if (allData) {
       // Filter snippets based on selected language and category
       let filteredSnippets = allData?.preloadedSnippets || [];
-      filteredSnippets = sortArrayByKey(filteredSnippets, 'title')
+      filteredSnippets = sortArrayByKey(filteredSnippets, "title");
 
       if (selectedLanguage && selectedLanguage !== "all") {
         filteredSnippets = filteredSnippets.filter(
@@ -493,7 +496,7 @@ const IndexContent = () => {
               }
             }}
           />
-          <div className="flex-1 flex flex-col bg-gray-50 dark:bg-gray-900 transition-colors">
+          <div className="w-full flex-1 flex flex-col bg-gray-50 dark:bg-gray-900 transition-colors">
             <AppHeader
               onHomeClick={() => {
                 setViewState("landing");
